@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Qing Liu - ICT4510 Assignment 01 | Home</title>
+<link rel="stylesheet"  type="text/css" href="www/css/main.css"></link>
+<script src="www/js/main.js"></script>
+</head>
+
+<body>
+	<header id="banner">
+		<h1>ICT 4510 Assignment 01 - Home Page</h1>
+		<h2>HTML5 is now supported by all major browsers</h2>
+		<nav>
+			<ul>
+				<li><a href="">Tell us</a></li>
+				<li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a></li>
+				<li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a></li>
+				<li><a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a></li>
+				<li><a href="http://www.apple.com/safari/">Safari</a></li>
+				<li><a href="http://www.opera.com/">Opera</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="content" class="body">
+		<aside id="related-links">
+			<section>
+				<img src="www/image/logo_html5.gif">
+			</section>
+			<section>
+				<img src="www/image/img_experience.jpg">
+			</section>
+			<section>
+				<header>
+					<h3>Related Links</h3>
+					<ul>
+						<li><a href="http://www.w3schools.com/">w3schools</a></li>
+						<li><a href="http://www.w3.org/">W3C</a></li>
+						<li><a href="http://www.whatwg.org/">WHATWG</a></li>
+					</ul>
+				</header>
+			</section>
+		</aside>
+		<section>
+			<header>
+				<h2>Share Your HTML5 Experience</h2>
+				<article>
+					Tell us how do you like HTML5.
+				</article>
+			</header>
+			<article>
+				<form action="" id="contact-form">
+					<label>First Name</label><input type="text" id="fname" name="fname" autofocus><br>
+					<label>Last Name</label><input type="text" id="lname" name="lname"><br>
+					<label>Gender</label>
+					<select name="gender">
+						<option value="Female">Female</option>
+						<option value="Male">Male</option>
+					</select><br>
+					<label>Browser you use</label><br>
+					<input type="checkbox" name="browsers" value="IE9+">IE9+<br>
+					<input type="checkbox" name="browsers" value="Firefox">Firefox<br>
+					<input type="checkbox" name="browsers" value="Chrome">Chrome<br>
+					<input type="checkbox" name="browsers" value="Safari">Safari<br>
+					<input type="checkbox" name="browsers" value="Opera">Opera<br>
+					<input type="checkbox" name="browsers" value="Other">Other<br>
+					<label>Your experience with HTML5</label><br>
+					<textarea name="htmlexp" rows="10" cols="50"></textarea><br>
+					<button id="form-submit" onclick="showName()">Submit</button>
+				</form>
+			</article>
+		</section>
+	</section>
+	<footer>
+		<p>created by Qing Liu</p>
+	</footer>
+</body>
+</html> 
