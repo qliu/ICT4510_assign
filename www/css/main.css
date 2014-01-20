@@ -13,7 +13,6 @@ header, footer, nav, section, aside, article
 /* body */
 body {
 	background: #F5F4EF;
-	color: #000305;
 	font-size: 14px;
 	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	color: #7F7F7F;
@@ -29,7 +28,6 @@ h2 {font-size: 22px}
 h3 {font-size: 20px}
 
 /* Anchors */
-a {outline: 0;}
 a:link, a:visited
 {
 	color: #484848;
