@@ -153,6 +153,12 @@ aside ul
 	width: 100px;
 }
 
+/* message */
+#message
+{
+	color: #000000;
+}
+
 /* footer */
 footer
 {
