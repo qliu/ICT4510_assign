@@ -34,7 +34,7 @@ a:link, a:visited
 	padding: 0 1px;
 	text-decoration: underline;
 }
-a:hover, a:active
+#banner a:hover, #banner a:active, #related-links a:hover, #related-links a:active
 {
 	background-color: #C74350;
 	color: #fff;
