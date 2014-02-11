@@ -13,7 +13,7 @@ var getName = function(){
 
 var emptyForm = function(){
 	$('#myForm :text').val("");
-	$('#myForm :select').val("");
+	$('#myList').prop('selectedIndex',0);
 };
 
 var display = function(){
