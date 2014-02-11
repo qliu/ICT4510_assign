@@ -30,6 +30,7 @@ $(document).ready(function(){
 	
 	// jquery validation plug-in
 	$('#myForm').validate({
+		debug: true,
 		rules:{
 			fname:{
 				required: true,
