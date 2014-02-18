@@ -66,7 +66,7 @@ $(document).ready(function(){
 			error.insertBefore(element);
 		},
 		submitHandler: function(){
-			$('a[href="#tabs-2-2"]').click();
+			$('#ui-id-15').click();
 		},
 	}); // end validate
 	
