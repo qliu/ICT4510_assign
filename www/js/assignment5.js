@@ -7,7 +7,8 @@ ICT 4510
 var getName = function(){
 	var fname = $('#fname').val().trim();
 	var lname = $('#lname').val().trim();
-	var fullName = "Thank you, " + fname + " " + lname + "! Your information has been submitted!";
+	var email = $('#email').val().trim();
+	var fullName = "<p>Thank you, " + fname + " " + lname + "! Your information has been submitted!<br>A comfirmation letter has been sent to " + email + "</p>";
 	return fullName;
 };
 
@@ -60,6 +61,9 @@ $(document).ready(function(){
 			myList:{
 				required: "Please select a browser"
 			}
+		},
+		errorPlacement: function(error,element){
+			error.insertBefore(element);
 		},
 		submitHandler: function(){
 			display();
