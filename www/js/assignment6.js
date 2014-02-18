@@ -24,17 +24,19 @@ var display = function(){
 
 $(document).ready(function(){
 	// jquery ui
-	$( "#accordion" ).accordion();
-	$( "#tabs" ).tabs();
+	$('#mainNav').menu();
+	$('#accordion').accordion({heightStyle: "content"});
+	$('#tabs1').tabs();
+	$('#tabs2').tabs();
 
 	// superfish navigation bar
-	$('#mainNav').superfish();
+	//$('#mainNav').superfish();
 	
 	// focus on the first text field
-	$('#myForm :text:first').focus();
+	//$('#myForm :text:first').focus();
 	
 	// jquery validation plug-in
-	$('#myForm').validate({
+	$('#myForm-personalInfo').validate({
 		debug: true,
 		rules:{
 			fname:{
@@ -47,9 +49,6 @@ $(document).ready(function(){
 				required: true,
 				email: true,
 			},
-			myList:{
-				required: true,
-			}
 		},
 		messages:{
 			fname:{
@@ -62,6 +61,23 @@ $(document).ready(function(){
 				required: "Please enter your Email address",
 				email: "Please enter a valid Email address",
 			},
+		},
+		errorPlacement: function(error,element){
+			error.insertBefore(element);
+		},
+		submitHandler: function(){
+			$('#ui-id-4').click();
+		},
+	}); // end validate
+	
+	$('#myForm-webPref').validate({
+		debug: true,
+		rules:{
+			myList:{
+				required: true,
+			}
+		},
+		messages:{
 			myList:{
 				required: "Please select a browser"
 			}

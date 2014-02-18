@@ -11,22 +11,31 @@
 <script src="www/lib/jquery-validation/dist/jquery.validate.js"></script>
 <script src="www/lib/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.js"></script>
 <script src="www/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script src="www/lib/superfish/src/js/superfish.js"></script>
 <script src="www/js/assignment6.js"></script>
 <style>
-	/* Overwrite Superfish Nav Bar*/
-	.sf-menu {
-		margin-left: 50px;	
+	/* additional style */
+	.float-img {
+		float:right;
 	}
-	
-	.sf-menu li {
-	    background: none repeat scroll 0 0 #000305;
-	    transition: background 0.2s ease 0s;
-	    white-space: nowrap;
+	/* jquery ui style */
+	ui-accordion-content {
+		height: 500;
 	}
-	
-	.sf-menu a {
-	    color: #FFF;
+	.ui-menu { 
+    	overflow: hidden;
+    	z-index: 999;
+	}
+	.ui-menu .ui-menu {
+	    overflow: visible !important;
+	}
+	.ui-menu > li { 
+	    float: left;
+	    display: block;
+	    width: auto !important;
+	}
+	.ui-menu ul li {
+	    display:block;
+	    float:none;
 	}
 </style>
 </head>
@@ -35,7 +44,7 @@
 	<header id="banner">
 		<h1>ICT 4510 Assignment 06 - Home Page</h1>
 		<h2>HTML5 is now supported by all major browsers</h2>
-		<ul id="mainNav" class="sf-menu">
+		<ul id="mainNav">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About the survey</a>
 				<ul>
@@ -56,107 +65,95 @@
 		</ul>
 	</header>
 	<section id="content" class="body">
-		<aside id="related-links">
-			<section>
-				<img src="www/image/logo_html5.gif">
-			</section>
-			<section>
-				<img src="www/image/img_experience.jpg">
-			</section>
-			<section>
-				<header>
-					<h3>Related Links</h3>
-					<ul>
-						<li><a href="http://www.w3schools.com/">w3schools</a></li>
-						<li><a href="http://www.w3.org/">W3C</a></li>
-						<li><a href="http://www.whatwg.org/">WHATWG</a></li>
-					</ul>
-				</header>
-			</section>
-		</aside>
-		<section>
-			<h2 class="demoHeaders">Accordion</h2>
-			<div id="accordion">
-				<h3>First</h3>
-				<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-				<h3>Second</h3>
-				<div>Phasellus mattis tincidunt nibh.</div>
-				<h3>Third</h3>
-				<div>Nam dui erat, auctor a, dignissim quis.</div>
-			</div>
-		</section>
-		<section>
-			<header>
-				<h2>Tell us about you</h2>
-				<article>
-					Enter your first and last name.
-				</article>
-			</header>
-			<div id="tabs">
-				<ul>
-					<li><a href="#tabs-1">Personal Information</a></li>
-					<li><a href="#tabs-2">Web Preference</a></li>
-				</ul>
-				<div id="tabs-1">
-					<form action="" id="myForm-personalInfo">
-						<label>First Name</label><input type="text" id="fname" name="fname"><br>
-						<label>Last Name</label><input type="text" id="lname" name="lname"><br>
-						<label>Email Address</label><input type="text" id="email" name="email" size="40"><br>
-						<input type="submit" id="submit1" name="submit" value="Next">
-					</form>
-				</div>
-				<div id="tabs-2">
-					<form action="" id="myForm-webPref">
-						<label>Preferred Browser</label>
-						<select id="myList" name="myList">
-							<option value="">--- Select a browser ---</option>
-							<option value="ie9+">IE9+</option>
-							<option value="firefox">Firefox</option>
-							<option value="chrome">Chrome</option>
-							<option value="safari">Safari</option>
-							<option value="opera">Opera</option>
-							<option value="other">Other</option>
-						</select><br>
-						<input type="checkbox" id="toggleField" name="toggleField">Are you in the Web development track?<br>
-						<div id="toggleDiv">
-							<label>Explain why you chose this track.</label>
-							<textarea rows="3" cols="30"></textarea>
-						</div>
-						<input type="submit" id="submit2" name="submit" value="Submit">
-					</form>
-				</div>
-			</div>
-
-			<article>
-				<form action="" id="myForm">
-					<label>First Name</label><input type="text" id="fname" name="fname"><br>
-					<label>Last Name</label><input type="text" id="lname" name="lname"><br>
-					<label>Email Address</label><input type="text" id="email" name="email" size="40"><br>
-					<label>Preferred Browser</label>
-					<select id="myList" name="myList">
-						<option value="">--- Select a browser ---</option>
-						<option value="ie9+">IE9+</option>
-						<option value="firefox">Firefox</option>
-						<option value="chrome">Chrome</option>
-						<option value="safari">Safari</option>
-						<option value="opera">Opera</option>
-						<option value="other">Other</option>
-					</select><br>
-					<input type="checkbox" id="toggleField" name="toggleField">Are you in the Web development track?<br>
-					<div id="toggleDiv">
-						<label>Explain why you chose this track.</label>
-						<textarea rows="3" cols="30"></textarea>
+		<div id="tabs1">
+			<ul>
+				<li><a href="#tabs-1">About HTML5</a></li>
+				<li><a href="#tabs-2">Tell us about you</a></li>
+			</ul>
+			<div id="tabs-1">
+				<h2 class="demoHeaders">About HTML5</h2>
+				<div id="accordion">
+					<h3>What is HTML5?</h3>
+					<div>
+						<p><img class="float-img" src="www/image/logo_html5.gif"></p>
+						<p>HTML5 is the latest standard for HTML.</p>
+						<p>The previous version of HTML, HTML 4.01, came in 1999, 
+						and the internet has changed significantly since then.</p>
+						<p>HTML5 was designed to replace both HTML 4, XHTML, and the HTML DOM Level 2.
+						It was specially designed to deliver rich content without the need for additional plugins. 
+						The current version delivers everything from animation to graphics, music to movies, 
+						and can also be used to build complicated web applications.</p>
+						<p>HTML5 is also cross-platform. It is designed to work whether you are using a PC, 
+						or a Tablet, a Smartphone, or a Smart TV.</p>
 					</div>
-					<input type="submit" id="submit" name="submit" value="Submit">
-				</form>
-				<div id="message">
+					<h3>How Did HTML5 Get Started?</h3>
+					<div>
+						<p>HTML5 is a cooperation between the World Wide Web Consortium (W3C) 
+						and the Web Hypertext Application Technology Working Group (WHATWG).</p>
+						<p>WHATWG was working with web forms and applications, and 
+						W3C was working with XHTML 2.0. In 2006, they decided to 
+						cooperate and create a new version of HTML.</p>
+						<p>Some rules for HTML5 were established:</p>
+						<ul>
+							<li>New features should be based on HTML, CSS, DOM, and JavaScript</li>
+							<li>The need for external plugins (like Flash) should be reduced</li>
+							<li>Error handling should be easier than in previous versions</li>
+							<li>Scripting has to be replaced by more markup</li>
+							<li>HTML5 should be device-independent</li>
+							<li>The development process should be visible to the public</li>
+						</ul>
+					</div>
+					<h3>What can HTML5 do?</h3>
+					<div>
+						<p>With HTML5 you can make a Pacman game like <a href="https://www.google.com/doodles/30th-anniversary-of-pac-man">what Google did</a>.</p>
+						<a class="fancybox" id="myImage" rel="group" href="www/image/img_googlepacman.jpg"><img src="www/image/img_googlepacman.jpg" alt="" /></a>
+					</div>
 				</div>
-			</article>
-			<article>
-				<p>With HTML5 you can make a Pacman game like <a href="https://www.google.com/doodles/30th-anniversary-of-pac-man">what Google did</a>.</p>
-				<a class="fancybox" id="myImage" rel="group" href="www/image/img_googlepacman.jpg"><img src="www/image/img_googlepacman.jpg" alt="" /></a>
-			</article>
-		</section>
+			</div>
+			<div id="tabs-2">
+				<header>
+					<h2>Tell us about you</h2>
+				</header>
+				<article>
+					<div id="tabs2">
+						<ul>
+							<li><a href="#tabs-2-1">Personal Information</a></li>
+							<li><a href="#tabs-2-2">Web Preference</a></li>
+						</ul>
+						<div id="tabs-2-1">
+							<form action="" id="myForm-personalInfo">
+								<label>First Name</label><input type="text" id="fname" name="fname"><br>
+								<label>Last Name</label><input type="text" id="lname" name="lname"><br>
+								<label>Email Address</label><input type="text" id="email" name="email" size="40"><br>
+								<input type="submit" id="submit1" name="submit" value="Next">
+							</form>
+						</div>
+						<div id="tabs-2-2">
+							<form action="" id="myForm-webPref">
+								<label>Preferred Browser</label>
+								<select id="myList" name="myList">
+									<option value="">--- Select a browser ---</option>
+									<option value="ie9+">IE9+</option>
+									<option value="firefox">Firefox</option>
+									<option value="chrome">Chrome</option>
+									<option value="safari">Safari</option>
+									<option value="opera">Opera</option>
+									<option value="other">Other</option>
+								</select><br>
+								<input type="checkbox" id="toggleField" name="toggleField">Are you in the Web development track?<br>
+								<div id="toggleDiv">
+									<label>Explain why you chose this track.</label>
+									<textarea rows="3" cols="30"></textarea>
+								</div>
+								<input type="submit" id="submit2" name="submit" value="Submit">
+							</form>
+						</div>
+					</div>
+					<div id="message">
+					</div>
+				</article>
+			</div>
+		</div>
 	</section>
 	<footer>
 		<p>created by Qing Liu</p>
